@@ -48,7 +48,7 @@ class Game extends Component {
     this.state = {
       history: [
         {
-          squares: Array(9).fill(null);
+          squares: Array(9).fill(null),
         }
       ],
       stepNumber: 0,
@@ -87,7 +87,7 @@ class Game extends Component {
     const current = history[this.state.stepNumber];
     const winner = calculateWinner(current.squares);
 
-    const move = history.map((step, move) => {
+    const moves = history.map((step, move) => {
       const desc = move ?
         'Go to move #' + move : 
         'Go to game start';
